@@ -7,7 +7,6 @@ class Byte() {
     var byte = BooleanArray(8)
 
 
-
     fun getIntValue(pesos: IntArray):Int{//[7,6,5,4,3,2,1,0]
         var valor:Int = 0
         for (i in 0 until 8){
@@ -18,8 +17,6 @@ class Byte() {
         }
         return valor
     }
-
-
 
     fun resetByte() {
         this.byte.fill(false)

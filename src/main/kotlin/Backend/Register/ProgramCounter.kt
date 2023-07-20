@@ -12,7 +12,7 @@ class ProgramCounter {
     fun FetchByte(memoria:Memory): Byte {
         val int_direction = this.direction.getInt()
         //Actualizamos posición del PC.
-        val new_dir = this.direction.getInt() + 2
+        val new_dir = this.direction.getInt() + 1
         var cadena = Integer.toHexString(new_dir)
 
         if (cadena.length < 4){

@@ -20,7 +20,6 @@ class CPU(private val memory: Memory) {
         this.register_A.content = false
         this.register_X.content = false
         this.register_Y.content = false
-        this.memory.reset()
    }
 
     fun execute(_cicles:Int){
@@ -34,8 +33,7 @@ class CPU(private val memory: Memory) {
 
             when {
                 contenido.equalsByte(HexToBinary.HexToBinary("A9")[0]) -> {
-                    val valor:Byte = this.programCounter.FetchByte(this.memory)//Tener en cuenta que no he
-                    //incrementado el PC porque no se si deberia de incrementar el valor del word.
+                    val valor:Byte = this.programCounter.FetchByte(this.memory)
                     this.acumulator.data = valor
 
                     if (valor.equalsByte(HexToBinary.HexToBinary("00")[0])){//Si el reg acumulador es 0 entonces flag zero a 1.
