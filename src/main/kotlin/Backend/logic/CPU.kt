@@ -112,7 +112,7 @@ class CPU(private val memory: Memory) {
 
 
     fun transferData(registerOrigin:InformationRegisters,registerDestination:InformationRegisters){
-        registerOrigin.data = registerDestination.data.clone()
+        registerDestination.data = registerOrigin.data.clone()
 
         if (this.register_A.data.equalsByte(HexToBinary.HexToBinary("00")[0])){//Si el reg acumulador es 0 entonces flag zero a 1.
             this.processorStatus.zero_flag = true

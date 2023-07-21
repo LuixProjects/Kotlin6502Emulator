@@ -8,5 +8,5 @@ fun main(args: Array<String>) {
     memory.loadMemoryFile("./src/main/kotlin/Backend/logic/memoria.txt")
     val cpu = CPU(memory)
     cpu.reset()
-    cpu.execute(4)
+    cpu.execute(100)
 }
