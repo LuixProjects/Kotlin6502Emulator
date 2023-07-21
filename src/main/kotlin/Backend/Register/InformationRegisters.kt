@@ -1,5 +1,8 @@
 package Backend.Register
 
+import Backend.RepresentacionInformacion.Byte
+
 class InformationRegisters {
-    var content : Boolean = false
+    var data = Byte()
+
 }

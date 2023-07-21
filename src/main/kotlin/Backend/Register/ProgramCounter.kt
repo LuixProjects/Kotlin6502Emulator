@@ -8,6 +8,8 @@ import Backend.logic.Memory
 class ProgramCounter {
     var direction = Word()
 
+    constructor(){}
+    constructor(direction:Word){this.direction=direction}
 
     fun FetchByte(memoria:Memory): Byte {
         val int_direction = this.direction.getInt()

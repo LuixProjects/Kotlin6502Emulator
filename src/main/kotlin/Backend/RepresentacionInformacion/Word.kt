@@ -3,7 +3,10 @@ package Backend.RepresentacionInformacion
 class Word {
     var word:List<Byte> = listOf(Byte(),Byte())
 
-
+    constructor(){}
+    constructor(listaByte:List<Byte>){
+        this.word = listaByte
+    }
     fun getInt():Int{
         val superior_byte = intArrayOf(15,14,13,12,11,10,9,8)
         val inferior_byte = intArrayOf(7,6,5,4,3,2,1,0)
